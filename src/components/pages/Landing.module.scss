@@ -1,0 +1,22 @@
+@import '../../styles/custom-properties.scss';
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  margin: 3rem 15% 1rem 15%;
+  border-radius: 1rem;
+}
+
+.registerBtn {
+  background-color: var(--linq-green);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  &:hover {
+    color: var(--normal-font-color);
+  }
+}
