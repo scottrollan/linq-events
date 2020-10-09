@@ -120,6 +120,9 @@ export default function Register() {
           <Button variant="secondary" className={styles.submit} type="submit">
             SIGN UP
           </Button>
+          <Button variant="secondary" className={styles.donate} href="submit">
+            SIGN UP
+          </Button>
         </Form>
       </div>
     </div>
