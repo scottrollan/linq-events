@@ -79,12 +79,7 @@ export default function RegisterForm() {
     }
   };
   return (
-    <Form
-      onSubmit={registerMe}
-      className={styles.form}
-      id="registerForm"
-      style={{ zIndex: 9 }}
-    >
+    <Form onSubmit={registerMe} className={styles.form} id="registerForm">
       <input type="hidden" name="form-name" value="register" />
       <input
         type="text"
