@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Menu from '../Menu';
 import Logo from '../Logo';
 import RegisterForm from '../RegisterForm';
+import MessagePopup from '../MessagePopup';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import { Card } from 'react-bootstrap';
@@ -15,6 +16,7 @@ export default function Landing() {
     <div className={styles.Landing}>
       <Menu />
       <Logo className={styles.logo} />
+      <MessagePopup />
       <div className={styles.landingContent}>
         <Card className={styles.card}>
           <Card.Header as="h3">Título de la conferencia</Card.Header>
