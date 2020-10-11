@@ -75,7 +75,6 @@ export default function Register() {
         } else {
           setMessage('Please sign me up for the Oct 29 conference.');
         }
-        setTimeout(() => console.log(message), 1000);
         break;
       default:
         break;
