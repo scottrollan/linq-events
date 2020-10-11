@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Menu from '../Menu';
 import Logo from '../Logo';
+import Register from './Register';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import { Card } from 'react-bootstrap';
@@ -69,6 +70,7 @@ export default function Landing() {
           </Link>
         </Card.Body>
       </Card>
+      <Register />
     </div>
   );
 }
