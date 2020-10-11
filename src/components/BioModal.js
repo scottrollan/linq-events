@@ -11,11 +11,16 @@ export default function BioModal({ name }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button
+        variant="secondary"
+        title={`ver el bio de ${name}`}
+        onClick={handleShow}
+        style={{ marginLeft: '2rem' }}
+      >
         {name}
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} size="lg">
         {bios.map((b) => {
           return (
             <span
@@ -29,8 +34,12 @@ export default function BioModal({ name }) {
                 <Modal.Title>{b.name}</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                {HTMLParser(b.bio)}
-                <img src={b.imageURL} alt="" />
+                <div>{HTMLParser(b.bio)}</div>
+                <img
+                  src={b.imageURL}
+                  alt=""
+                  style={{ alignSelf: 'flex-end' }}
+                />
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

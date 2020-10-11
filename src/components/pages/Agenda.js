@@ -12,6 +12,9 @@ export default function Agenda() {
   return (
     <div className={styles.agenda}>
       <Menu />
+      <div className={styles.header}>
+        <h3>Agenda</h3>
+      </div>
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header>
@@ -23,15 +26,17 @@ export default function Agenda() {
             <Card.Body className={styles.body}>
               <Card.Text className={styles.text}>
                 6pm - Como el trauma afecta nuestra salud mental: Una historia
-                personal -{' '}
-                <em>
+                personal -
+                <em style={{ fontSize: 'smaller' }}>
                   How Trauma Affects Our Mental Health: A Personal History
                 </em>
                 <BioModal name="Leo Martínez" />
               </Card.Text>
               <Card.Text className={styles.text}>
                 7pm - La salud mental entre la comunidad LGBT+ -{' '}
-                <em>Mental Health Within the LGBT+ Commmunity</em>
+                <em style={{ fontSize: 'smaller' }}>
+                  Mental Health Within the LGBT+ Commmunity
+                </em>
                 <BioModal name="Renato Pérez" />
               </Card.Text>
               <Card.Text className={styles.text}>8pm - Panel </Card.Text>
@@ -47,16 +52,20 @@ export default function Agenda() {
           <Accordion.Collapse eventKey="1">
             <Card.Body className={styles.body}>
               <Card.Text className={styles.text}>
-                12pm - Soy trans, ¿y qué? - <em>I'm Trans, So What?</em>
+                12pm - Soy trans, ¿y qué? -{' '}
+                <em style={{ fontSize: 'smaller' }}>I'm Trans, So What?</em>
                 <BioModal name="Bamby Salcedo" />
               </Card.Text>
               <Card.Text className={styles.text}>
                 1pm - La psicología de justicia -{' '}
-                <em>The Psychology of Justice</em>
+                <em style={{ fontSize: 'smaller' }}>
+                  The Psychology of Justice
+                </em>
                 <BioModal name="Dr. Mario Tovar" />
               </Card.Text>
               <Card.Text className={styles.text}>
-                2pm - La conexión nos protege - <em>Connection Protects Us</em>
+                2pm - La conexión nos protege -{' '}
+                <em style={{ fontSize: 'smaller' }}>Connection Protects Us</em>
                 <BioModal name="María Limón" />
               </Card.Text>
             </Card.Body>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import $ from 'jquery';
 import { Form, Button } from 'react-bootstrap';
 import Menu from '../Menu';
+import MessagePopup from '../MessagePopup';
 import styles from './Register.module.scss';
 
 export default function Register() {
@@ -9,6 +10,9 @@ export default function Register() {
   const [status, setStatus] = useState('');
   const [email, setEmail] = useState('');
   const [zip, setZip] = useState('');
+  const [message, setMessage] = useState(
+    'Please sign me up for the Oct 29 conference'
+  );
 
   const encode = (data) => {
     const formData = new FormData();
@@ -24,25 +28,26 @@ export default function Register() {
       name,
       email,
       zip,
-      message: 'Please sign me up for the Oct 29 conference',
+      message,
     };
 
-    fetch('/', {
-      method: 'POST',
-      body: encode(data),
-    })
-      .then(() => {
-        setStatus('Form Submission Successful!');
-        // $('#alertMessageSent').css('display', 'flex');
-        // $('#alertMessageSent').delay(1500).fadeOut(1000);
-        setName('');
-        setEmail('');
-        $('#newsletterEng')[0].reset();
-      })
-      .catch((error) => {
-        setStatus('Form Submission Failed!');
-        console.log(status, error);
+    try {
+      fetch('/', {
+        method: 'POST',
+        body: encode(data),
       });
+
+      setStatus('Form Submission Successful!');
+      $('#messagePopup').css('display', 'flex');
+      // $('#alertMessageSent').delay(1500).fadeOut(1000);
+      setName('');
+      setEmail('');
+      setZip('');
+      $('#registerForm')[0].reset();
+    } catch (error) {
+      setStatus('Form Submission Failed!');
+      console.log(status, error);
+    }
     e.preventDefault();
   };
 
@@ -60,41 +65,51 @@ export default function Register() {
         return setZip(value);
       }
     }
+    if (name === 'message') {
+      return setMessage(value);
+    }
   };
+
   useEffect(() => {
     $('#register').addClass('active');
   });
   return (
     <div>
       <Menu />
+      <MessagePopup />
       <div className={styles.register}>
-        <h2 style={{ color: 'white' }}>This is the Register Page</h2>
+        <div className={styles.header}>
+          <h3>¡Registrarse!</h3>
+        </div>
         <Form onSubmit={registerMe} className={styles.form} id="registerForm">
-          <Form.Group controlId="formBasicEmail">
-            <input type="hidden" name="form-name" value="register" />
-            <input
-              type="hidden"
-              name="message"
-              value="Please register me for the Oct 29 conference"
-            />
-
+          <input type="hidden" name="form-name" value="register" />
+          <input
+            type="text"
+            name="message"
+            value={message}
+            onChange={(e) => {
+              handleChange(e);
+            }}
+            style={{ display: 'none' }}
+          />
+          <Form.Group>
             <Form.Label className={styles.label}>
               Nombre y Apellido / Full Name
             </Form.Label>
             <Form.Control
               type="text"
-              // id="name"
               name="name"
               value={name}
               onChange={(e) => handleChange(e)}
               required
             />
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
             <Form.Label className={styles.label}>
               Correo electrónico / Email
             </Form.Label>
             <Form.Control
               type="email"
-              // id="name"
               name="email"
               value={email}
               onChange={(e) => handleChange(e)}
@@ -104,6 +119,8 @@ export default function Register() {
               Nunca compartiremos su correo electrónico con nadie más. We'll
               never share your email with anyone else.
             </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formGridZip">
             <Form.Label className={styles.label}>
               Código postal / ZIP code
             </Form.Label>

@@ -13,12 +13,12 @@ export default function Landing() {
   return (
     <div className={styles.Landing}>
       <Menu />
-      <Logo />
+      <Logo className={styles.logo} />
       <Card className={styles.card}>
-        <Card.Header>Título de la conferencia</Card.Header>
+        <Card.Header as="h3">Título de la conferencia</Card.Header>
         <Card.Body>
           <blockquote className="blockquote mb-0">
-            <p>
+            <p className={styles.pp}>
               Únete a nosotrxs para la edición 2020 de la conferencia auspiciada
               por Latino LinQ, en la cual exploraremos la intersección de la
               salud mental y el VIH. El propósito de esta conferencia virtual es
@@ -33,7 +33,7 @@ export default function Landing() {
             </p>
             <footer>
               <Link to="/Register" className={styles.registerBtn}>
-                ¡Regístrate ahora!
+                ¡Regístrate!
               </Link>
             </footer>
           </blockquote>
@@ -42,23 +42,31 @@ export default function Landing() {
       <Card className={styles.card}>
         <Card.Body>
           <blockquote className="blockquote mb-0">
-            <p>
+            <p className={styles.pp}>
               Join us for the 2020 edition of Latino LinQ's virtual conference
               exploring the intersection of mental health and HIV. The goal of
               this conference is to build awareness about mental wellbeing and
               how it relates to HIV. The two-day event will bring together
               advocates, members of the Latinx community, and a distinguished
               lineup of presenters. If you are one of the first 50 to register
-              for the conference, you and invite a friend. IMPORTANT NOTE: The
-              conference will be held in Spanish and simultaneous interpretation
-              will be available.
+              for the conference, you will be eligible to receive a care
+              package, so register today and invite a friend. IMPORTANT NOTE:
+              The conference will be held in Spanish and simultaneous
+              interpretation will be available.
             </p>
             <footer>
               <Link to="/Register" className={styles.registerBtn}>
-                Register now!
+                Register!
               </Link>
             </footer>
           </blockquote>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Link to="/Agenda" className={styles.registerBtn}>
+            Ver la agenda
+          </Link>
         </Card.Body>
       </Card>
     </div>

@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: column;
 }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--overlay-light);
+  width: 100%;
+}
 .body {
   display: flex;
   flex-direction: column;
