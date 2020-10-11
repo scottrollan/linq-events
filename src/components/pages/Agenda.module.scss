@@ -4,3 +4,30 @@
   display: flex;
   flex-direction: column;
 }
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+.body > :nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.body > :nth-last-child(1) {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.body > :nth-child(even) {
+  background-color: var(--overlay-medium);
+}
+.text {
+  margin: 0;
+  border: 1px solid var(--overlay);
+  text-align: left;
+  width: 100%;
+  padding: 1rem 15vw 1rem calc(15vw + 3rem);
+  text-indent: -3rem; //this will indent every line except first line
+}
+
+.presenter {
+  border: none;
+}

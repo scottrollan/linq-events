@@ -118,12 +118,28 @@ export default function Register() {
             />
           </Form.Group>
           <Button variant="secondary" className={styles.submit} type="submit">
-            SIGN UP
-          </Button>
-          <Button variant="secondary" className={styles.donate} href="submit">
-            SIGN UP
+            Registrarse / Register
           </Button>
         </Form>
+        <div className={styles.form}>
+          <div className="form-label">
+            Considere hacer una donación para apoyar a Latino Linq en sus
+            esfuerzos por promover la equidad LGBTQ.
+          </div>
+          <Button
+            variant="secondary"
+            className={styles.donate}
+            href="https://www.paypal.com/fundraiser/charity/1436824"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donar / Donate
+          </Button>
+          <div className="form-label">
+            Please consider making a donation to support Latino Linq in their
+            efforts to advance LGBTQ equity.
+          </div>
+        </div>
       </div>
     </div>
   );
