@@ -31,7 +31,13 @@
     color: var(--normal-font-color);
   }
 }
-
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--overlay-light);
+  width: 100%;
+}
 @media screen and (max-width: $breakpoint-medium) {
   .landingContent {
     padding: 0 10px;

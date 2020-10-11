@@ -74,6 +74,9 @@ export default function Landing() {
             </Link>
           </Card.Body>
         </Card>
+        <div className={styles.header}>
+          <h3>¡Registrarse!</h3>
+        </div>
         <RegisterForm />
       </div>
     </div>
