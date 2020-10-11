@@ -14,14 +14,21 @@
   width: 100%;
 }
 .form {
-  width: $breakpoint-small;
+  max-width: $breakpoint-small;
   background-color: var(--linq-green);
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 5%;
   border-radius: 1rem;
+  @media screen and (min-width: $breakpoint-medium) {
+    min-width: $breakpoint-small;
+  }
+}
+.formGroup {
+  text-align: left !important;
 }
 .label {
   margin-top: 1rem;
+  text-align: left;
 }
 
 .donate,

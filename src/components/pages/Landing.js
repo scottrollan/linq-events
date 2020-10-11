@@ -63,7 +63,7 @@ export default function Landing() {
           </blockquote>
         </Card.Body>
       </Card>
-      <Card>
+      <Card className={styles.card}>
         <Card.Body>
           <Link to="/Agenda" className={styles.registerBtn}>
             Ver la agenda

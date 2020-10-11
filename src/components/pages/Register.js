@@ -52,21 +52,33 @@ export default function Register() {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'name') {
-      return setName(value);
-    }
-    if (name === 'email') {
-      return setEmail(value);
-    }
-    if (name === 'zip') {
-      const re = /^[0-9\b]+$/;
-      if (e.target.value === '' || re.test(e.target.value)) {
-        return setZip(value);
-      }
-    }
-    if (name === 'message') {
-      return setMessage(value);
+    const { name, value, checked } = e.target;
+    switch (name) {
+      case 'name':
+        return setName(value);
+      case 'email':
+        return setEmail(value);
+      case 'zip':
+        const re = /^[0-9\b]+$/;
+        if (e.target.value === '' || re.test(e.target.value)) {
+          return setZip(value);
+        } else {
+          break;
+        }
+      case 'message':
+        return setMessage(value);
+      case 'checkbox':
+        if (checked) {
+          setMessage(
+            'Please sign me up for the Oct 29 conference AND sign me up for the *** Latino Linq Newsletter ***'
+          );
+        } else {
+          setMessage('Please sign me up for the Oct 29 conference.');
+        }
+        setTimeout(() => console.log(message), 1000);
+        break;
+      default:
+        break;
     }
   };
 
@@ -92,7 +104,7 @@ export default function Register() {
             }}
             style={{ display: 'none' }}
           />
-          <Form.Group>
+          <Form.Group className={styles.formGroup}>
             <Form.Label className={styles.label}>
               Nombre y Apellido / Full Name
             </Form.Label>
@@ -104,7 +116,7 @@ export default function Register() {
               required
             />
           </Form.Group>
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group className={styles.formGroup} controlId="formBasicEmail">
             <Form.Label className={styles.label}>
               Correo electrónico / Email
             </Form.Label>
@@ -120,7 +132,25 @@ export default function Register() {
               never share your email with anyone else.
             </Form.Text>
           </Form.Group>
-          <Form.Group controlId="formGridZip">
+          <div
+            className={styles.formGroup}
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}
+          >
+            <input
+              type="checkbox"
+              id="signUpNewsletter"
+              name="checkbox"
+              onChange={(e) => handleChange(e)}
+            />
+            <span style={{ marginLeft: '1rem' }}>
+              ¡Apúntame también al boletín de Latino LinQ!
+            </span>
+          </div>
+          <Form.Group className={styles.formGroup} controlId="formGridZip">
             <Form.Label className={styles.label}>
               Código postal / ZIP code
             </Form.Label>
@@ -130,6 +160,7 @@ export default function Register() {
               name="zip"
               value={zip}
               maxLength="5"
+              style={{ width: '50%' }}
               onChange={(e) => handleChange(e)}
               required
             />
