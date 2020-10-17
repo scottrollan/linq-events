@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Menu from '../Menu';
 import Logo from '../Logo';
-import RegisterForm from '../RegisterForm';
+// import RegisterForm from '../RegisterForm';
 import MessagePopup from '../MessagePopup';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
@@ -78,10 +78,10 @@ export default function Landing() {
             </Link>
           </Card.Body>
         </Card>
-        <div className={styles.header}>
+        {/* <div className={styles.header}>
           <h3>¡Registrarse!</h3>
         </div>
-        <RegisterForm />
+        <RegisterForm /> */}
       </div>
     </div>
   );
