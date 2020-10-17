@@ -10,7 +10,7 @@ export default function Menu() {
         Inicio<span className={styles.eng}> - Home</span>
       </Link>
       <Link to="/Register" className="breadcrumb-item" id="register">
-        Registrarse<span className={styles.eng}> - Register</span>
+        Registración<span className={styles.eng}> - Register</span>
       </Link>
       <Link to="/Agenda" className="breadcrumb-item" id="agenda">
         Agenda

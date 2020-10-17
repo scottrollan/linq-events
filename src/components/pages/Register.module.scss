@@ -9,6 +9,19 @@
   padding: 3rem;
   background-color: var(--overlay-light);
 }
+.registerEsp,
+.registerEng {
+  display: flex;
+  flex-direction: column;
+}
+.registerEng {
+  display: none;
+}
+.translate {
+  &:hover {
+    cursor: pointer;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
