@@ -136,6 +136,7 @@ export default function RegisterForm() {
           ¡Apúntame también al boletín de Latino LinQ!
         </span>
       </div>
+
       <Form.Group className={styles.formGroup} controlId="formGridZip">
         <Form.Label className={styles.label}>
           Código postal / ZIP code
@@ -151,6 +152,25 @@ export default function RegisterForm() {
           required
         />
       </Form.Group>
+      <div
+        className={styles.formGroup}
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        <input
+          type="checkbox"
+          id="regalito"
+          name="checkbox"
+          onChange={(e) => handleChange(e)}
+        />
+        <span style={{ marginLeft: '1rem' }}>
+          I'm interested in receiving a self-care package.{' '}
+          <em>Note: You must be one of the first 50 people to register. </em>{' '}
+        </span>
+      </div>
       <Button variant="secondary" className={styles.submit} type="submit">
         Registrarse / Register
       </Button>

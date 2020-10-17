@@ -26,7 +26,7 @@ export default function MessagePopup() {
           </Button>
           <Button
             variant="secondary"
-            href="https://www.paypal.com/fundraiser/charity/1436824"
+            href="https://secure.everyaction.com/JLZYxY_D9kqnTm7ezSa0bA2"
             target="_blank"
             rel="noopener noreferrer"
             style={{

@@ -19,7 +19,7 @@ export default function Agenda() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              29 de octubre
+              Jueves 29 de octubre
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
@@ -27,17 +27,33 @@ export default function Agenda() {
               <Card.Text className={styles.text}>
                 6pm - Como el trauma afecta nuestra salud mental: Una historia
                 personal -
-                <em style={{ fontSize: 'smaller' }}>
+                <span style={{ fontSize: 'smaller' }}>
                   How Trauma Affects Our Mental Health: A Personal History
-                </em>
-                <BioModal name="Leo Martínez" />
+                </span>
+                - presentado por <u>Leo Martínez</u>
+                <div className={styles.subText}>
+                  <b>Sinopsis:</b> Participantes aprenderán acerca de los
+                  efectos a lo largo de la vida de situaciones traumáticas. Como
+                  estas afectan la salud física y mental, especialmente de las
+                  personas que se identifican con la comunidad LGBTQI, a través
+                  de una historia personal.
+                </div>
+                {/* <BioModal name="Leo Martínez" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
                 7pm - La salud mental entre la comunidad LGBT+ -{' '}
-                <em style={{ fontSize: 'smaller' }}>
+                <span style={{ fontSize: 'smaller' }}>
                   Mental Health Within the LGBT+ Commmunity
-                </em>
-                <BioModal name="Renato Pérez" />
+                </span>{' '}
+                - presentado por <u>Renato Pérez</u>
+                <div className={styles.subText}>
+                  <b>Sinopsis:</b> La comunidad LGBT+ se enfrenta a mayor
+                  disparidad de traumas que afectan nuestra salud mental. En
+                  este taller les participantes recibirán información, donde
+                  puedan aprender a reconocer síntomas y cómo lidiar utilizando
+                  habilidades de afrontamiento
+                </div>
+                {/* <BioModal name="Renato Pérez" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>8pm - Panel </Card.Text>
             </Card.Body>
@@ -46,27 +62,53 @@ export default function Agenda() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              30 de octubre
+              Viernes 30 de octubre
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="1">
             <Card.Body className={styles.body}>
               <Card.Text className={styles.text}>
                 12pm - Soy trans, ¿y qué? -{' '}
-                <em style={{ fontSize: 'smaller' }}>I'm Trans, So What?</em>
-                <BioModal name="Bamby Salcedo" />
+                <span style={{ fontSize: 'smaller' }}>I'm Trans, So What?</span>{' '}
+                - presentado por <u>Bamby Salcedo</u>
+                <div className={styles.subText}>
+                  <b>Sinopsis:</b> Este taller se enfocará en proveer
+                  información pertinente a la comunidad trans, experiencias,
+                  sobrevivencias y estrategias de resistencia y como es que la
+                  comunidad trans se está empoderando para poder formar un mejor
+                  mundo el cual vivir.
+                </div>
+                {/* <BioModal name="Bamby Salcedo" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
                 1pm - La psicología de justicia -{' '}
-                <em style={{ fontSize: 'smaller' }}>
+                <span style={{ fontSize: 'smaller' }}>
                   The Psychology of Justice
-                </em>
-                <BioModal name="Dr. Mario Tovar" />
+                </span>{' '}
+                = presentado por <u>Dr. Mario Tovar</u>
+                <div className={styles.subText}>
+                  <b>Sinopsis:</b> Se describirá el concepto de justicia desde
+                  diferentes perspectivas, y principios psicológicos para que
+                  cada persona pueda reflexionar acerca de sus cualidades, para
+                  convertirse en promotores de justicia social en sus
+                  comunidades.
+                </div>
+                {/* <BioModal name="Dr. Mario Tovar" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
                 2pm - La conexión nos protege -{' '}
-                <em style={{ fontSize: 'smaller' }}>Connection Protects Us</em>
-                <BioModal name="María Limón" />
+                <span style={{ fontSize: 'smaller' }}>
+                  Connection Protects Us
+                </span>{' '}
+                - presentado por <u>María Limón</u>
+                <div className={styles.subText}>
+                  <b>Sinopsis:</b> La violencia contra nuestras comunidades, por
+                  el racismo, afecta nuestra salud y relaciones. Este taller
+                  presentará estrategias para navegar los efectos y sanar los
+                  daños al romper el aislamiento y al establecer conexiones
+                  comunitarias.
+                </div>
+                {/* <BioModal name="María Limón" /> */}
               </Card.Text>
             </Card.Body>
           </Accordion.Collapse>

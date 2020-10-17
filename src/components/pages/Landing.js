@@ -19,7 +19,11 @@ export default function Landing() {
       <MessagePopup />
       <div className={styles.landingContent}>
         <Card className={styles.card}>
-          <Card.Header as="h3">Título de la conferencia</Card.Header>
+          <Card.Header as="h3">Entre Nos 2020</Card.Header>
+          <Card.Header as="h5">
+            Un espacio virtual para acabar con el estigma y promover el
+            bienestar emocional.
+          </Card.Header>
           <Card.Body>
             <blockquote className="blockquote mb-0">
               <p className={styles.pp}>

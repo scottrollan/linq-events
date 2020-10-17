@@ -15,9 +15,9 @@ export default function Menu() {
       <Link to="/Agenda" className="breadcrumb-item" id="agenda">
         Agenda
       </Link>
-      <Link to="/Presenters" className="breadcrumb-item" id="presenters">
+      {/* <Link to="/Presenters" className="breadcrumb-item" id="presenters">
         Presentadorxs<span className={styles.eng}> - Presenters</span>
-      </Link>
+      </Link> */}
     </Breadcrumb>
   );
 }

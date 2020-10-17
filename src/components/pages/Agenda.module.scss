@@ -34,7 +34,9 @@
   padding: 1rem 15vw 1rem calc(15vw + 3rem);
   text-indent: -3rem; //this will indent every line except first line
 }
-
+.subText {
+  text-indent: 0;
+}
 .presenter {
   border: none;
 }

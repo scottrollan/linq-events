@@ -4,14 +4,22 @@
 .register {
   display: flex;
   flex-direction: column;
+  min-height: 90vh;
   align-items: center;
+  padding: 3rem;
+  background-color: var(--overlay-light);
 }
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--overlay-light);
   width: 100%;
+}
+.section {
+  margin: 2rem;
+}
+.button {
+  margin: 1rem;
 }
 .form {
   max-width: $breakpoint-small;
@@ -31,7 +39,9 @@
   margin-top: 1rem;
   text-align: left;
 }
-
+.regalitoBtn {
+  display: none;
+}
 .donate,
 .submit {
   margin: 0.5rem;
