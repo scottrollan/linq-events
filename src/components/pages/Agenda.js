@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import BioModal from '../BioModal';
+// import BioModal from '../BioModal';
 import Menu from '../Menu';
 import { Accordion, Card, Button } from 'react-bootstrap';
 import $ from 'jquery';
@@ -31,13 +31,14 @@ export default function Agenda() {
                   How Trauma Affects Our Mental Health: A Personal History
                 </span>
                 - presentado por <u>Leo Martínez</u>
-                <div className={styles.subText}>
+                <br></br>
+                <span className={styles.subText}>
                   <b>Sinopsis:</b> Participantes aprenderán acerca de los
                   efectos a lo largo de la vida de situaciones traumáticas. Como
                   estas afectan la salud física y mental, especialmente de las
                   personas que se identifican con la comunidad LGBTQI, a través
                   de una historia personal.
-                </div>
+                </span>
                 {/* <BioModal name="Leo Martínez" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
@@ -46,13 +47,14 @@ export default function Agenda() {
                   Mental Health Within the LGBT+ Commmunity
                 </span>{' '}
                 - presentado por <u>Renato Pérez</u>
-                <div className={styles.subText}>
+                <br></br>
+                <span className={styles.subText}>
                   <b>Sinopsis:</b> La comunidad LGBT+ se enfrenta a mayor
                   disparidad de traumas que afectan nuestra salud mental. En
                   este taller les participantes recibirán información, donde
                   puedan aprender a reconocer síntomas y cómo lidiar utilizando
                   habilidades de afrontamiento
-                </div>
+                </span>
                 {/* <BioModal name="Renato Pérez" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>8pm - Panel </Card.Text>
@@ -71,13 +73,14 @@ export default function Agenda() {
                 12pm - Soy trans, ¿y qué? -{' '}
                 <span style={{ fontSize: 'smaller' }}>I'm Trans, So What?</span>{' '}
                 - presentado por <u>Bamby Salcedo</u>
-                <div className={styles.subText}>
+                <br></br>
+                <span className={styles.subText}>
                   <b>Sinopsis:</b> Este taller se enfocará en proveer
                   información pertinente a la comunidad trans, experiencias,
                   sobrevivencias y estrategias de resistencia y como es que la
                   comunidad trans se está empoderando para poder formar un mejor
                   mundo el cual vivir.
-                </div>
+                </span>
                 {/* <BioModal name="Bamby Salcedo" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
@@ -86,13 +89,14 @@ export default function Agenda() {
                   The Psychology of Justice
                 </span>{' '}
                 = presentado por <u>Dr. Mario Tovar</u>
-                <div className={styles.subText}>
+                <br></br>
+                <span className={styles.subText}>
                   <b>Sinopsis:</b> Se describirá el concepto de justicia desde
                   diferentes perspectivas, y principios psicológicos para que
                   cada persona pueda reflexionar acerca de sus cualidades, para
                   convertirse en promotores de justicia social en sus
                   comunidades.
-                </div>
+                </span>
                 {/* <BioModal name="Dr. Mario Tovar" /> */}
               </Card.Text>
               <Card.Text className={styles.text}>
@@ -100,14 +104,14 @@ export default function Agenda() {
                 <span style={{ fontSize: 'smaller' }}>
                   Connection Protects Us
                 </span>{' '}
-                - presentado por <u>María Limón</u>
-                <div className={styles.subText}>
+                - presentado por <u>María Limón</u> <br></br>
+                <span className={styles.subText}>
                   <b>Sinopsis:</b> La violencia contra nuestras comunidades, por
                   el racismo, afecta nuestra salud y relaciones. Este taller
                   presentará estrategias para navegar los efectos y sanar los
                   daños al romper el aislamiento y al establecer conexiones
                   comunitarias.
-                </div>
+                </span>
                 {/* <BioModal name="María Limón" /> */}
               </Card.Text>
             </Card.Body>
