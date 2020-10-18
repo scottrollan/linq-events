@@ -64,7 +64,7 @@ export default function Register() {
               style={{ fontSize: '24px' }}
             />
             <span style={{ marginLeft: '1rem', fontSize: '24px' }}>
-              Estoy interesado en recibir un paquete de cuidado personal.
+              Estoy interesadx en recibir un paquete de cuidado personal.
               <em>
                 Nota: debe ser una de las primeras 50 personas en registrarse.
               </em>{' '}
@@ -126,7 +126,7 @@ export default function Register() {
         {/* <RegisterForm /> */}
         <div className={`${styles.form} ${styles.section}`}>
           <div className="form-label">
-            Considere hacer una donación para apoyar a Latino Linq en sus
+            Considere hacer una donación para apoyar a Latino LinQ en sus
             esfuerzos por promover la equidad LGBTQ.
           </div>
           <Button
@@ -139,7 +139,7 @@ export default function Register() {
             Donar / Donate
           </Button>
           <div className="form-label">
-            Please consider making a donation to support Latino Linq in their
+            Please consider making a donation to support Latino LinQ in their
             efforts to advance LGBTQ equity.
           </div>
         </div>
