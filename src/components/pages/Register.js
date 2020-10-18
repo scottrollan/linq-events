@@ -7,8 +7,22 @@ import MessagePopup from '../MessagePopup';
 import styles from './Register.module.scss';
 
 export default function Register() {
+  const [showRegalito, setShowRegalito] = React.useState(false);
+  const [showCarePackage, setShowCarePackage] = React.useState(false);
+
   const handleChange = () => {
-    $('#regalitoBtn').toggle('display');
+    if ($('#regalito').is(':checked')) {
+      setShowRegalito(true);
+    } else if ($('#regalito').is(':not(:checked)')) {
+      setShowRegalito(false);
+    }
+  };
+  const handleChangeEng = () => {
+    if ($('#carePackage').is(':checked')) {
+      setShowCarePackage(true);
+    } else if ($('#carePackage').is(':not(:checked)')) {
+      setShowCarePackage(false);
+    }
   };
 
   const showEnglish = () => {
@@ -60,7 +74,7 @@ export default function Register() {
               type="checkbox"
               id="regalito"
               name="checkbox"
-              onChange={(e) => handleChange(e)}
+              onChange={() => handleChange()}
               style={{ fontSize: '24px' }}
             />
             <span style={{ marginLeft: '1rem', fontSize: '24px' }}>
@@ -70,6 +84,17 @@ export default function Register() {
               </em>{' '}
             </span>
           </div>
+          <span
+            style={{ display: showRegalito ? 'block' : 'none' }}
+            className={styles.regalito}
+          >
+            <a
+              href="https://docs.google.com/forms/d/1AoerqGOUNMENUzHf3jz4co3MpDTUdTGswSo-9kWXBNk/edit"
+              className={styles.pulsate}
+            >
+              Haga clic aquí para completar el formulario de inscripción.
+            </a>
+          </span>
         </div>
         <div id="registerEng" className={styles.registerEng}>
           <div className={styles.header}>
@@ -101,9 +126,9 @@ export default function Register() {
           <div className={styles.section}>
             <input
               type="checkbox"
-              id="regalito"
+              id="carePackage"
               name="checkbox"
-              onChange={(e) => handleChange(e)}
+              onChange={() => handleChangeEng()}
               style={{ fontSize: '24px' }}
             />
             <span style={{ marginLeft: '1rem', fontSize: '24px' }}>
@@ -113,16 +138,19 @@ export default function Register() {
               </em>{' '}
             </span>
           </div>
-        </div>
-        <div>
-          <Button
-            className={`${styles.button} ${styles.regalitoBtn}`}
-            id="regalitoBtn"
-            href="https://docs.google.com/forms/d/1AoerqGOUNMENUzHf3jz4co3MpDTUdTGswSo-9kWXBNk/edit"
+          <span
+            style={{ display: showCarePackage ? 'block' : 'none' }}
+            className={styles.regalito}
           >
-            Click here to fill out the entry form
-          </Button>
+            <a
+              href="https://docs.google.com/forms/d/1AoerqGOUNMENUzHf3jz4co3MpDTUdTGswSo-9kWXBNk/edit"
+              className={styles.pulsate}
+            >
+              Click here to fill out the entry form
+            </a>
+          </span>
         </div>
+
         {/* <RegisterForm /> */}
         <div className={`${styles.form} ${styles.section}`}>
           <div className="form-label">

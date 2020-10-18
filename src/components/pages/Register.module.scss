@@ -32,7 +32,13 @@
   margin: 2rem;
 }
 .button {
-  margin: 1rem;
+  margin: 1rem 0;
+}
+.regalito {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--overlay-light);
+  border-radius: 0.5rem;
 }
 .form {
   max-width: $breakpoint-small;
@@ -52,9 +58,7 @@
   margin-top: 1rem;
   text-align: left;
 }
-.regalitoBtn {
-  display: none;
-}
+
 .donate,
 .submit {
   margin: 0.5rem;
@@ -62,5 +66,69 @@
     background-color: var(--linq-green);
     border: 1px solid var(--white);
     color: var(--white);
+  }
+}
+
+.pulsate {
+  color: var(--default-font-color);
+  animation: pulsate 3s ease-out infinite;
+  -webkit-animation: pulsate 3s ease-out infinite;
+  -moz-animation: pulsate 3s ease-out infinite;
+  -o-animation: pulsate 3s ease-out infinite;
+  -ms-animation: pulsate 3s ease-out infinite;
+}
+@keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@-moz-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@-o-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@-ms-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
   }
 }
