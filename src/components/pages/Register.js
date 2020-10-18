@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import banner from '../../assets/Sign Up Page Banner.jpg';
 import $ from 'jquery';
 import { Button } from 'react-bootstrap';
 import Menu from '../Menu';
@@ -40,6 +41,7 @@ export default function Register() {
   return (
     <div>
       <Menu />
+      <img src={banner} alt="" style={{ width: '100vw' }} />
       <div className={styles.register}>
         <MessagePopup />
         <div id="registerEsp" className={styles.registerEsp}>
@@ -78,7 +80,7 @@ export default function Register() {
               style={{ fontSize: '24px' }}
             />
             <span style={{ marginLeft: '1rem', fontSize: '24px' }}>
-              Estoy interesadx en recibir un paquete de cuidado personal.
+              Estoy interesadx en recibir un paquete de cuidado personal.{' '}
               <em>
                 Nota: debe ser una de las primeras 50 personas en registrarse.
               </em>{' '}
@@ -134,7 +136,7 @@ export default function Register() {
             <span style={{ marginLeft: '1rem', fontSize: '24px' }}>
               I'm interested in receiving a self-care package.{' '}
               <em>
-                Note: You must be one of the first 50 people to register.{' '}
+                Note: you must be one of the first 50 people to register.{' '}
               </em>{' '}
             </span>
           </div>

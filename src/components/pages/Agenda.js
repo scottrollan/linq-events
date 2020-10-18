@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import banner from '../../assets/Sign Up Page Banner.jpg';
 // import BioModal from '../BioModal';
 import Menu from '../Menu';
 import { Accordion, Card, Button } from 'react-bootstrap';
@@ -12,6 +13,7 @@ export default function Agenda() {
   return (
     <div className={styles.agenda}>
       <Menu />
+      <img src={banner} alt="" style={{ width: '100vw' }} />
       <div className={styles.header}>
         <h3>Agenda</h3>
       </div>

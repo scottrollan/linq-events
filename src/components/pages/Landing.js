@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Menu from '../Menu';
 import Logo from '../Logo';
+import banner from '../../assets/Sign Up Page Banner.jpg';
 // import RegisterForm from '../RegisterForm';
 import MessagePopup from '../MessagePopup';
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ export default function Landing() {
   return (
     <div className={styles.Landing}>
       <Menu />
+      <img src={banner} alt="" style={{ width: '100vw' }} />
       <Logo className={styles.logo} />
       <MessagePopup />
       <div className={styles.landingContent}>
