@@ -108,11 +108,16 @@ export default function Agenda() {
                 </span>{' '}
                 - presentado por <u>María Limón</u> <br></br>
                 <span className={styles.subText}>
-                  <b>Sinopsis:</b> La violencia contra nuestras comunidades, por
-                  el racismo, afecta nuestra salud y relaciones. Este taller
-                  presentará estrategias para navegar los efectos y sanar los
-                  daños al romper el aislamiento y al establecer conexiones
-                  comunitarias.
+                  <b>Sinopsis:</b> Las historias de las comunidades latin@s en
+                  los Estados Unidos es diversa; lo que tenemos en común es que
+                  somos provenientes de varios pueblos colonizados. Aunque ya no
+                  hay un conquistador derrotando nuestros barrios, los efectos
+                  de la violencia que sobrevivieron nuestros antepasados sigue
+                  afectando nuestras amistades, nuestras organizaciones,
+                  nuestras relaciones, y nuestra salud. Tomaremos un tiempo para
+                  analizar estos efectos e investigar algunos pasos que podamos
+                  tomar para lidiar con los retos que la colonización presenta
+                  en nuestras vidas hoy día.
                 </span>
                 {/* <BioModal name="María Limón" /> */}
               </Card.Text>
