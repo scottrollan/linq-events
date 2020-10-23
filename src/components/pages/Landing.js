@@ -29,18 +29,17 @@ export default function Landing() {
           <Card.Body>
             <blockquote className="blockquote mb-0">
               <p className={styles.pp}>
-                Únete a nosotrxs para la edición 2020 de la conferencia
-                auspiciada por Latino LinQ, en la cual exploraremos la
-                intersección de la salud mental y el VIH. El propósito de esta
-                conferencia virtual es concientizar a la comunidad Latinx sobre
-                el bienestar mental y cómo se relaciona con el VIH. Durante este
-                evento de dos días se encontrarán defensorxs, miembrxs de la
-                comunidad Latinx, y un distinguido grupo de presentadorxs. Y si
-                eres unx de las primeras 50 personas en registrarte, serás
-                elegible para recibir un regalito en el correo. Entonces, no
-                esperes y registrate hoy mismo e invita a unx amigx! NOTA
-                IMPORTANTE: La conferencia será en español y ofreceremos
-                interpretación simultánea.
+                Únete a la segunda edición de nuestra conferencia en la cual
+                exploraremos la intersección de la salud mental y el VIH. El
+                propósito de esta conferencia virtual es concientizar a la
+                comunidad Latinx sobre el bienestar mental y cómo se relaciona
+                con el VIH. Durante este evento de dos días se encontrarán
+                defensorxs, miembrxs de la comunidad Latinx, y un distinguido
+                grupo de presentadorxs. Y si eres unx de las primeras 50
+                personas en registrarte, serás elegible para recibir un regalito
+                en el correo. Entonces, no esperes y registrate hoy mismo e
+                invita a unx amigx! NOTA IMPORTANTE: La conferencia será en
+                español y ofreceremos interpretación simultánea.
               </p>
               <footer>
                 <Link to="/Register" className={styles.registerBtn}>
